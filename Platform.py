@@ -8,7 +8,7 @@ def Teacher():
             if inputpassword == 1234:
                 ShowTeacherMenu()
                 TeacherMenuChoice()
-                break
+
             elif inputpassword == 0:
                 break
             else:

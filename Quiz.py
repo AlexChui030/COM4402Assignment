@@ -14,9 +14,11 @@ def Edit():
                     inputAnswer = input("Enter the correct answer")
                     inputQuestionTuple = (inputQuestion,inputOptionA,inputOptionB,inputOptionC,inputOptionD)
 
+
                 except:
                     print("Unable to enter question")
-
+            elif choice == 0:
+               break
         except:
             print("Invalid input")
 
