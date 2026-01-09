@@ -1,26 +1,32 @@
 import Quiz
 
-
 def Teacher():
-    while True:
+    attempt = 0
+    max_attempts = 3
+    while attempt< 3:
         try:
-            inputpassword = int(input("Enter password or 0 to exit\n"))
-            if inputpassword == 1234:
+            input_password = int(input("Enter password or 0 to exit\n"))
+            if input_password == 1234:
                 ShowTeacherMenu()
                 TeacherMenuChoice()
 
-            elif inputpassword == 0:
+            elif input_password == 0:
                 break
             else:
-                print("Invalid password")
+                attempt +=1
+                if max_attempts-attempt > 0:
+                    print(f"Invalid password! Account will be lock after {max_attempts-attempt} times!")
         except:
-            print("Invalid password")
-
-
+            attempt += 1
+            if max_attempts - attempt > 0:
+                print(f"Invalid password! Account will be lock after {max_attempts - attempt} times!")
+    if attempt >= max_attempts:
+        print("Invalid password! Max attempts reached - Account Locked!")
+        exit()
 
 
 def ShowTeacherMenu():
-    print("1. View/ Edit Quiz\n2.Start Quiz\n3. View Score\n0.Quit\n")
+    print("1.Edit Quiz\n2.Start Quiz\n3. View Score\n0.Quit\n")
 
 def TeacherMenuChoice():
     try:

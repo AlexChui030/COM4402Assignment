@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7047c3f-af5c-47e1-bd15-b0a2cce503f6" name="Changes" comment="24DEC">
+    <list default="true" id="e7047c3f-af5c-47e1-bd15-b0a2cce503f6" name="Changes" comment="5Jan backup">
+      <change afterPath="$PROJECT_DIR$/CallMenu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OnExit.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Platform.py" beforeDir="false" afterPath="$PROJECT_DIR$/Platform.py" afterDir="false" />
@@ -46,6 +48,9 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="37FIpwhEjJvUpx9jHfLRpARii4c" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -54,6 +59,7 @@
   &quot;keyToString&quot;: {
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;Python.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Platform.executor&quot;: &quot;Run&quot;,
     &quot;Python.Quiz.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -92,6 +98,11 @@
       <workItem from="1766606880506" duration="2893000" />
       <workItem from="1767483454704" duration="1267000" />
       <workItem from="1767517021636" duration="5832000" />
+      <workItem from="1767633123809" duration="422000" />
+      <workItem from="1767824661172" duration="690000" />
+      <workItem from="1767961360273" duration="3979000" />
+      <workItem from="1767981227291" duration="1312000" />
+      <workItem from="1767990336200" duration="2786000" />
     </task>
     <task id="LOCAL-00001" summary="23DEC test">
       <option name="closed" value="true" />
@@ -109,7 +120,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766609301316</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="5Jan backup">
+      <option name="closed" value="true" />
+      <created>1767633313044</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1767633313044</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,10 +148,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="23DEC test" />
     <MESSAGE value="24DEC" />
-    <option name="LAST_COMMIT_MESSAGE" value="24DEC" />
+    <MESSAGE value="5Jan backup" />
+    <option name="LAST_COMMIT_MESSAGE" value="5Jan backup" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/COM4402Assignment$Main.coverage" NAME="Main Coverage Results" MODIFIED="1767519011095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/COM4402Assignment$Main.coverage" NAME="Main Coverage Results" MODIFIED="1767993628319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/COM4402Assignment$Platform.coverage" NAME="Platform Coverage Results" MODIFIED="1767981970398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/COM4402Assignment$Quiz.coverage" NAME="Quiz Coverage Results" MODIFIED="1767484074531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
