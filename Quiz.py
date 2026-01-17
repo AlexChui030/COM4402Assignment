@@ -1,6 +1,4 @@
-
-
-def Edit():
+def Add(quiz_QnA):
     while True:
         try:
             choice = int(input("1.Add Question\n2.View Question\n0.Return\n"))
@@ -19,7 +17,14 @@ def Edit():
                             break
                         else:
                             print(f"Invalid answer: {inputAnswer}")
-                    QuestionTuple = (inputQuestion,inputOptionA,inputOptionB,inputOptionC,inputOptionD,inputAnswer)
+                    question ={"question": inputQuestion,
+                               "optionA": inputOptionA,
+                               "optionB": inputOptionB,
+                               "optionC": inputOptionC,
+                               "optionD": inputOptionD,
+                               "answer": inputAnswer}
+                    quiz_QnA.append(question)
+                    print(quiz_QnA)
 
                 except:
                     print("Unable to enter question")
@@ -30,8 +35,9 @@ def Edit():
         except:
             print("Invalid input")
 
-def ViewQuestion():
+def ViewQuestion(quiz_QnA):
     print("ViewQuestion")
+
     # for i in
 
 def Start():

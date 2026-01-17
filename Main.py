@@ -4,12 +4,7 @@ import OnExit
 
 
 def initialize():
-    question = {
-        "qustionNo": None,
-        "question": None,
-        "answer": None
-    }
-
+    quiz_QnA = []
     score = {
         "studentID": None,
         "studentScore": None,
@@ -17,6 +12,7 @@ def initialize():
 
     studentAnswer = []
 
+    return quiz_QnA, score, studentAnswer
 
 def UserRoleMenu():
     userrole = None
@@ -32,14 +28,13 @@ def UserRoleMenu():
 
 ###########################################################################
 #Main
-initialize()
+quiz_QnA, score, studentAnswer = initialize()
 while True:
     match UserRoleMenu():
         case 1:
-            Platform.Teacher()
-
+            Platform.Teacher(quiz_QnA)
         case 2:
-            Platform.Student()
+            Platform.Student(quiz_QnA, score, studentAnswer)
 
         case 0:
             OnExit.On_Exit()

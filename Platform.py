@@ -1,6 +1,6 @@
 import Quiz
 
-def Teacher():
+def Teacher(quiz_QnA):
     attempt = 0
     max_attempts = 3
     while attempt< 3:
@@ -8,7 +8,8 @@ def Teacher():
             input_password = int(input("Enter password or 0 to exit\n"))
             if input_password == 1234:
                 ShowTeacherMenu()
-                TeacherMenuChoice()
+                TeacherMenuChoice(quiz_QnA)
+
 
             elif input_password == 0:
                 break
@@ -28,16 +29,16 @@ def Teacher():
 def ShowTeacherMenu():
     print("1.Edit Quiz\n2.Start Quiz\n3. View Score\n0.Quit\n")
 
-def TeacherMenuChoice():
+def TeacherMenuChoice(quiz_QnA):
     try:
         choice = int(input())
         match choice:
             case 1 :
-                Quiz.Edit()
+                Quiz.Add(quiz_QnA)
             case 2:
-                Quiz.Start()
+                Quiz.Start(quiz_QnA)
             case 3:
-                Quiz.ViewScore()
+                Quiz.ViewScore(quiz_QnA)
             case 0:
                 return
             case _:
@@ -46,5 +47,5 @@ def TeacherMenuChoice():
         print("Invalid input")
 
 
-def Student():
+def Student(question,score,studentAnswer):
     print("StudentPlatform")
