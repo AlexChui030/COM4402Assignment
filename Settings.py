@@ -14,5 +14,4 @@ def initialize():
     total_score = 0
 
     students = [{"studentID": 1,"studentScore": 20},{"studentID": 2,"studentScore": 40},{"studentID": 3,"studentScore": 39},{"studentID": 4,"studentScore": 70},{"studentID": 5,"studentScore": 69}]
-    #
-    # print(f"Student_ID: " + students[2]["studentID"])
+
