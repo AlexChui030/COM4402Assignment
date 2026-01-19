@@ -84,6 +84,7 @@ def Start():
             print("Incorrect! The correct answer is: "+Settings.global_QnA[i]["answer"])
             # print(f"score: {score}")
             break
+    return score
     print(f"Quiz Finished!\nYour final score is {score}")
     Settings.students.append({input_ID : score})
     print(Settings.students)

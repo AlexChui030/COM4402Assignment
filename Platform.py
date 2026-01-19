@@ -51,3 +51,7 @@ def TeacherMenuChoice():
 
 def Student():
     print("StudentPlatform")
+    score = Quiz.Start()
+    if score >= 70:
+        print("Excellent!", end=" ")
+    print(f"You {'pass' if score>=40 else 'Fail'} the quiz")
