@@ -95,13 +95,13 @@ def ViewScore():
         print(f"i = {i}")
         print(f"Student_ID: "+ str(Settings.students[i]["studentID"]))
         print(f"Score: "+str(Settings.students[i]["studentScore"]))
-        Settings.totalscore += Settings.students[i]["studentScore"]
+        Settings.total_score += Settings.students[i]["studentScore"]
         if Settings.students[i]["studentScore"] >= 40:
             Settings.num_of_pass +=1
         if Settings.students[i]["studentScore"] >= 70:
             Settings.num_of_distinction +=1
     print(f"Total: {len(Settings.students)}")
-    print(f"Average: {Settings.totalscore/len(Settings.students)}")
+    print(f"Average: {Settings.total_score/len(Settings.students)}")
     print(f"Number of fail: {len(Settings.students)-Settings.num_of_pass}")
     print(f"Number of pass: {Settings.num_of_pass}")
     print(f"Number of distinction: {Settings.num_of_distinction}")
