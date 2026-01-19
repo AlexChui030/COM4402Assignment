@@ -1,11 +1,14 @@
-def Add(quiz_QnA):
+import Settings
+
+def Add():
+
     while True:
-        try:
+        # try:
             choice = int(input("1.Add Question\n2.View Question\n0.Return\n"))
-            if choice not in [0,1]:
+            if choice not in [0,1,2]:
                 print("Invalid input")
             elif choice == 1:
-                try:
+                # try:
                     inputQuestion = input("Enter question: ")
                     inputOptionA = input("Enter Option A: ")
                     inputOptionB = input("Enter Option B: ")
@@ -17,31 +20,74 @@ def Add(quiz_QnA):
                             break
                         else:
                             print(f"Invalid answer: {inputAnswer}")
-                    question ={"question": inputQuestion,
+                    QnA ={"question": inputQuestion,
                                "optionA": inputOptionA,
                                "optionB": inputOptionB,
                                "optionC": inputOptionC,
                                "optionD": inputOptionD,
                                "answer": inputAnswer}
-                    quiz_QnA.append(question)
-                    print(quiz_QnA)
+                    print(Settings.global_QnA)
+                    Settings.global_QnA.append(QnA)
+                    print(Settings.global_QnA)
+                # except:
+                #     print("Unable to enter question")
+            elif choice == 2:
+                print("View Questions and Answer:")
+                for i in range(0, len(Settings.global_QnA)):
+                    print(f"i = {i}")
+                    print(f"Question{i+1}:", Settings.global_QnA[i]["question"],"\n    OptionA: "+
+                          Settings.global_QnA[i]["optionA"],"\n    OptionB: "+
+                          Settings.global_QnA[i]["optionB"],"\n    OptionC: "+
+                          Settings.global_QnA[i]["optionC"],"\n    OptionD: "+
+                          Settings.global_QnA[i]["optionD"],"\n    Answer : "+
+                          Settings.global_QnA[i]["answer"])
+                # print(Settings.global_QnA)
+                # print(Settings.global_QnA[0])
+                # print(Settings.global_QnA[0]["question"])
+                # print(Settings.global_QnA[0]["question"],Settings.global_QnA[0]["optionA"])
+                # print("Question: ", Settings.global_QnA[0]["question"])
 
-                except:
-                    print("Unable to enter question")
-            elif choice ==2:
-                ViewQuestion()
             elif choice == 0:
                break
-        except:
-            print("Invalid input")
+        # except:
+        #     print("Invalid input")
 
-def ViewQuestion(quiz_QnA):
+def ViewQuestion():
     print("ViewQuestion")
 
     # for i in
 
 def Start():
     print("Start quiz")
+    input_ID = int(input("Enter your Student_ID: "))
+    score = 0
+
+    for i in range(0,len(Settings.global_QnA)):
+        # print(f"score: {score}")
+        print(f"i = {i}")
+        print(f"Question{i + 1}:", Settings.global_QnA[i]["question"], "\n    OptionA: " +
+              Settings.global_QnA[i]["optionA"], "\n    OptionB: " +
+              Settings.global_QnA[i]["optionB"], "\n    OptionC: " +
+              Settings.global_QnA[i]["optionC"], "\n    OptionD: " +
+              Settings.global_QnA[i]["optionD"])
+        while True:
+            student_answer = input("Enter your answer: ").upper()
+            if student_answer in ["A","B","C","D"]:
+                break
+            else:
+                print("Invalid answer! Input again")
+        if student_answer == Settings.global_QnA[i]["answer"]:
+            score += 1
+            print("Correct!")
+            print(f"Score: {score}")
+        else:
+            print("Incorrect! The correct answer is: "+Settings.global_QnA[i]["answer"])
+            # print(f"score: {score}")
+            break
+    print(f"Quiz Finished!\nYour final score is {score}")
+    Settings.students.append({input_ID : score})
+    print(Settings.students)
+
 
 def ViewScore():
     print("ViewScore")
