@@ -1,4 +1,3 @@
-
 import Platform
 import OnExit
 import Settings
