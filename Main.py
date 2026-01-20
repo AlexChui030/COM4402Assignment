@@ -1,4 +1,3 @@
-from tokenize import String
 
 import Platform
 import OnExit
@@ -20,14 +19,8 @@ import Settings
     # return quiz_QnA, score, studentAnswer
 
 def UserRoleMenu():
-    userrole = None
-    # try :
-    userrole = int(input("1.Teacher\n2.Student\n0.Exit\n"))
-    if userrole not in [0,1,2]:
-        print("input 1 or 2, or 0 to exit")
-
-    # except:
-    #     print("input 1 or 2, or 0 to exit")
+    print("1.Teacher\n2.Student\n0.Exit")
+    userrole = Settings.get_int_in_range(2)
     return userrole
 
 
@@ -48,12 +41,12 @@ Settings.initialize()
 ## Settings.global_QnA = alist
 ## print(Settings.global_QnA)
 ## print (list(Settings.global_QnA).append(5))
-QnA ={"question": "A1","optionA": "1","optionB": "2","optionC": "3","optionD": "4","answer": "A"}
-Settings.global_QnA.append(QnA)
-print(Settings.global_QnA)
-QnA ={"question": "B2","optionA": "1","optionB": "2","optionC": "3","optionD": "4","answer": "B"}
-Settings.global_QnA.append(QnA)
-print(Settings.global_QnA)
+# QnA ={"question": "A1","optionA": "1","optionB": "2","optionC": "3","optionD": "4","answer": "A"}
+# Settings.global_QnA.append(QnA)
+# print(Settings.global_QnA)
+# QnA ={"question": "B2","optionA": "1","optionB": "2","optionC": "3","optionD": "4","answer": "B"}
+# Settings.global_QnA.append(QnA)
+# print(Settings.global_QnA)
 while True:
     match UserRoleMenu():
         case 1:
