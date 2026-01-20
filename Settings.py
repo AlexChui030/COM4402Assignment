@@ -1,9 +1,8 @@
 def initialize():
-    # global ttt
-    # ttt = "aaa"
+
     global global_QnA, student, students, num_of_pass, num_of_distinction, total_score
     global_QnA = []
-    # print(global_QnA)
+
     student = {
         "studentID": None,
         "studentScore": None

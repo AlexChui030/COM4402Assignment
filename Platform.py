@@ -31,8 +31,6 @@ def ShowTeacherMenu():
     print("1.Edit Quiz\n2.Start Quiz\n3.View Score\n0.Quit")
 
 def TeacherMenuChoice():
-
-    # try:
         choice = Settings.get_int_in_range(3)
         match choice:
             case 1 :
@@ -45,12 +43,9 @@ def TeacherMenuChoice():
                 return
             case _:
                 print("Invalid input")
-    # except:
-    #     print("Invalid input")
 
 
 def Student():
-    # print("StudentPlatform")
     score = Quiz.Start()
     if score >= 70:
         print("Excellent!", end=" ")
