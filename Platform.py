@@ -50,8 +50,8 @@ def TeacherMenuChoice():
 
 
 def Student():
-    print("StudentPlatform")
+    # print("StudentPlatform")
     score = Quiz.Start()
     if score >= 70:
         print("Excellent!", end=" ")
-    print(f"You {'pass' if score/len(Settings.global_QnA)*100>=40 else 'Fail'} the quiz")
+    print(f"You {'pass' if score/len(Settings.global_QnA)*100>=40 else 'fail'} the quiz")

@@ -85,7 +85,7 @@ def Start():
 
     for i in range(0,len(Settings.global_QnA)):
         # print(f"score: {score}")
-        print(f"i = {i}")
+        # print(f"i = {i}")
         print(f"Question{i + 1}:", Settings.global_QnA[i]["question"])
         for j in range(0, len(Settings.global_QnA[i]["options"])):
             print(f"Option{chr(j + 65)}: " + Settings.global_QnA[i]["options"][j])
@@ -97,7 +97,7 @@ def Start():
                 # print(Settings.global_QnA[i]["answer"])
                 # print(Settings.global_QnA[i]["options"][ord(student_answer)-65])
                 if not 65<= ord(student_answer) <=len(Settings.global_QnA[i]["options"])+65:
-                    print("Invalid answer! Input again")
+                    print("Invalid answer!")
                 if str(Settings.global_QnA[i]["answer"]) == str(Settings.global_QnA[i]["options"][ord(student_answer)-65]):
                     score += 1
                     print("Correct!")
@@ -113,12 +113,14 @@ def Start():
 
 
     print(f"Quiz Finished!\nYour final score is {score}/ {len(Settings.global_QnA)} = {score/len(Settings.global_QnA)*100}%")
-    Settings.students.append({input_ID : score})
-    print(Settings.students)
+    # print(input_ID)
+    # print(score)
+    Settings.students.append({'studentID':input_ID, 'studentScore':score})
+    # print(Settings.students)
     return score
 
 def ViewScore():
-    print("ViewScore")
+    # print("ViewScore")
     for i in range (0,len(Settings.students)):
         # print(f"i = {i}")
         print(f"Student_ID: "+ str(Settings.students[i]["studentID"]))
@@ -128,7 +130,7 @@ def ViewScore():
             Settings.num_of_pass +=1
         if Settings.students[i]["studentScore"]/len(Settings.global_QnA)*100 >= 70:
             Settings.num_of_distinction +=1
-    print(f"Total: {len(Settings.students)}")
+    print(f"Total of test taken: {len(Settings.students)}")
     print(f"Average: {Settings.total_score/len(Settings.students)}")
     print(f"Number of fail: {len(Settings.students)-Settings.num_of_pass}")
     print(f"Number of pass: {Settings.num_of_pass}")
