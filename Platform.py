@@ -19,9 +19,7 @@ def Teacher():
                 if max_attempts-attempt > 0:
                     print(f"Invalid password! Account will be lock after {max_attempts-attempt} times!")
         except:
-            attempt += 1
-            if max_attempts - attempt > 0:
-                print(f"Invalid password! Account will be lock after {max_attempts - attempt} times!")
+            print(f"Invalid Input! Try Again!")
     if attempt >= max_attempts:
         print("Invalid password! Max attempts reached - Account Locked!")
         exit()

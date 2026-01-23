@@ -15,7 +15,7 @@ def Add():
                     if num_of_options <= 0:
                         print("Integer must be greater than 0")
                 except:
-                    print("Invalid input! Please enter a valid integer")
+                    print("Please enter a valid integer")
                 for i in range(num_of_options):
 
                     option = input(f"Enter Option {i+1} of {num_of_options}: \nOption{chr(i+65)}: ")
@@ -78,7 +78,7 @@ def Start():
     return score
 
 def ViewScore():
-
+    print("*************************************************")
     for i in range (0,len(Settings.students)):
         print(f"Student_ID: "+ str(Settings.students[i]["studentID"]))
         print(f"Score: "+str(Settings.students[i]["studentScore"])+"/"+str(len(Settings.global_QnA)))
@@ -89,7 +89,7 @@ def ViewScore():
 
         if Settings.students[i]["studentScore"]/len(Settings.global_QnA)*100 >= 70:
             Settings.num_of_distinction +=1
-
+        print("*************************************************")
     print(f"Total of test taken: {len(Settings.students)}")
     print(f"Average: {Settings.total_score/len(Settings.students)}")
     print(f"Number of fail: {len(Settings.students)-Settings.num_of_pass}")
